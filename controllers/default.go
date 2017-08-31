@@ -2,14 +2,14 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
+	"time"
 )
 
 type MainController struct {
 	beego.Controller
 }
 
-func (c *MainController) Get() {
-	c.Data["Website"] = "beego.me"
-	c.Data["Email"] = "astaxie@gmail.com"
-	c.TplName = "index.tpl"
+func (this *MainController) Get() {
+	this.Data["json"]=map[string]interface{}{"code":0,"msg":time.Now(),"data":"this is msg"}
+	this.ServeJSON()
 }
