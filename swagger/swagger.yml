@@ -1,0 +1,9 @@
+swagger: "2.0"
+info:
+  title: short URl
+  description: short url短域名服务
+  version: 1.0.0
+  contact:
+    email: sunyuanyuan@bilibili.com
+basePath: /api
+paths: {}
