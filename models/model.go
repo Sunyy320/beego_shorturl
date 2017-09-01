@@ -9,6 +9,11 @@ import (
 	"math/rand"
 	"time"
 )
+type response struct {
+	Code string `json:"code"`
+	Msg string `json:"message"`
+	Data string `json:"data"`
+}
 
 // 62个字符, 需要6bit做索引(2 ^ 6 = 64)
 var charTable = [...]rune{

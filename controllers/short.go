@@ -16,6 +16,10 @@ type ShortResult struct {
 	UrlLong  string
 }
 
+// @Title 生成长URL
+// @Description 生成长URL或者读取缓存
+// @Success 200 {object} models.response
+// @router /api/short/:longurl [get]
 func (this *ShortController) Get() {
 	longurl := this.Input().Get("longurl")
 	// 根据longurl生产key

@@ -1,6 +1,6 @@
 // @APIVersion 1.0.0
-// @Title short URl
-// @Description short url短域名服务
+// @Title ShortURL
+// @Description short url
 // @Contact sunyuanyuan@bilibili.com
 package routers
 

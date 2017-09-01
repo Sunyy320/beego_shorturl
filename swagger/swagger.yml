@@ -1,9 +1,20 @@
 swagger: "2.0"
 info:
-  title: short URl
-  description: short url短域名服务
+  title: ShortURL
+  description: short url
   version: 1.0.0
   contact:
     email: sunyuanyuan@bilibili.com
 basePath: /api
 paths: {}
+definitions:
+  models.response:
+    title: response
+    type: object
+    properties:
+      code:
+        type: string
+      data:
+        type: string
+      message:
+        type: string
