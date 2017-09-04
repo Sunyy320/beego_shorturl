@@ -1,7 +1,7 @@
 // @APIVersion 1.0.0
 // @Title ShortURL
 // @Description short url
-// @Contact sunyuanyuan@bilibili.com
+// @Contact 1062666905@qq.com
 package routers
 
 import (
