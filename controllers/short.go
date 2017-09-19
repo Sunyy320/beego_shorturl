@@ -24,6 +24,7 @@ func (this *ShortController) Get() {
 	longurl := this.Input().Get("longurl")
 	// 根据longurl生产key
 	key:=models.GetMD5(longurl)
+	// longurl-key : shorturl(生成的短地址)
 	mc:=cache.GetMemoryCache()
 
 	var short_res ShortResult
@@ -35,6 +36,10 @@ func (this *ShortController) Get() {
 	} else{
 		shortUrl:=models.GenerateShortUrl(longurl)
 		if err:=mc.Put(key,shortUrl,time.Minute * 2);err != nil{
+			beego.Info(err)
+			this.Data["json"]=this.baseController.BuildJSONResponse(2001,nil)
+		}
+		if err:=mc.Put(shortUrl,longurl,time.Minute * 2);err != nil{
 			beego.Info(err)
 			this.Data["json"]=this.baseController.BuildJSONResponse(2001,nil)
 		}

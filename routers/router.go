@@ -17,6 +17,7 @@ func init() {
 			return true
 		}),
 		beego.NSRouter("/short",&controllers.ShortController{}),
+		beego.NSRouter("/long",&controllers.LongController{}),
 	)
 	beego.AddNamespace(ns)
 
